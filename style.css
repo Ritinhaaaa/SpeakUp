@@ -1,0 +1,255 @@
+
+/* ESTILO GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+
+
+body{
+    background-color: white;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280;
+    margin: 0 auto;
+}
+
+.btn-start a{
+    text-decoration: none;
+    font-family: "Concert One", sans-serif;
+    color: white;
+    padding: 10px 40px;
+    margin-left: 800px;
+    margin-top: -100px;
+    font-size: 35px;
+    font-weight: 400;
+    background-color: #5CE1E6;
+    box-shadow: 0px 8px #51C2C6;
+    border-radius: 25px;
+    cursor: pointer;
+    display: inline-block;
+    transition: .2s;
+}
+
+.btn-start a:hover{
+    transform: scale(1.05);
+}
+
+
+/* ESTILO DO CABEÇALHO */
+
+header{
+    background-color: white;
+    width: 100%;
+    padding: 10px 4%;
+    box-shadow: 0px 3px 10px #cccccc79;
+    position: fixed;
+    z-index: 10;
+}
+
+header nav ul li a span{
+    margin-right: 5px;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: #5F99A6;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: #7eb7c5;
+    transform: scale(1.05) ;
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+.material-symbols-outlined{
+    align-items: center;
+}
+
+/* ESTILO DO TOPO */
+
+section.topo{
+    padding: 130px 170px 4%;
+}
+
+/* ESTILO DO MEIO */
+
+section.middle{
+    padding: 100px 170px 4%;
+    margin-top: 80px;
+    background-color: #5CE1E6;
+}
+
+section.middle div.flex{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+
+}
+
+section.middle h2{
+    font-family: "Concert One";
+    color: white;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+section.middle p{
+    color: #666666;
+    padding-top: 40px;
+}
+
+section img{
+    margin-top: -10px;
+}
+
+.brain-power{
+    display: inline-block;
+    margin-top: -65px;
+    padding-left: 80px;
+    transform: rotate(-15deg);
+    z-index: 10;
+}
+
+/* ESTILO DOS FLASHCARDS */
+
+section.cards{
+    padding: 100px 170px 4%;
+    padding-bottom: 250px;
+    margin-top: -60px;
+}
+
+section.cards div.flex{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+
+}
+
+section.cards h2{
+    font-family: "Concert One";
+    color: #51C2C6;
+    font-size: 50px;
+    font-weight: 400;
+    text-align: right;
+}
+
+section.cards p{
+    color: #666666;
+    padding-top: 40px;
+    padding-left: 90px;
+    text-align: right;
+}
+
+section.cards span{
+    font-family: "Concert One";
+    color: #FDAFFF;
+    font-size: 50px;
+    font-weight: 400;
+    text-align: right;
+}
+
+section.cards div.cardstxt{
+    margin-top: -100px;
+}
+
+section.cards img.idea{
+    margin-left: 300px;
+    margin-top: 10px;
+    transform: scaleX(-1);
+}
+
+section.cards img.card{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+
+}
+
+@keyframes flutuar{
+    0%{
+        top:0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/* ESTILO MEET THE TEACHER */
+
+section.teacher div.waves{
+    margin-top: -250px;
+
+}
+
+section.teacher{
+    padding: 10px 170px 4%;
+    padding-bottom: 150px;
+    margin-top: -60px;
+    background-color: #5CE1E6;
+}
+
+section.teacher div.flex{
+    display: flex;
+    gap: 70px;
+    justify-content: center;
+    align-items: center;
+}
+
+section.teacher p{
+    color: #666666;
+}
+
+.banner .wavy{
+    position: absolute;
+    margin-top: -400px;
+    width: 100%;
+    left: 0;
+    transform: scaleX(-1);
+    z-index: -10;
+}
+
+.banner1 .wavy{
+    position: absolute;
+    margin-top: -380px;
+    width: 100%;
+    left: 0;
+    transform: scaleX(-1);
+    z-index: -10;
+}
+
+/* ESTILO FOOTER */
+
+footer{
+    width: 100%;
+    padding: 30px 30px 4%;
+    background-color: #FCFF7E;
+}
+
+footer div.flex{
+    display: flex;
+    padding-top: 40px;
+    align-items: center;
+    padding-left: 200px;
+}
+
