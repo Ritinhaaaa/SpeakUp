@@ -1,35 +1,43 @@
 
 /* ESTILO GERAL */
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
 }
 
+:root{
+    --cor0:#5CE1E6;
+    --cor1:#51C2C6;
+    --cor2:#FCFF7E;
+    --cor3:#FDAFFF;
+    --cor4:#505050;
+    --cor5:#FFD595;
 
+    --fonte-padrao: 'Poppins',sans-serif;
+    --fonte-destaque:'Concert One', sans-serif;
+}
 
 body{
     background-color: white;
+    font-family: var(--fonte-padrao);
     height: 100vh;
 }
 
 .interface{
-    max-width: 1280;
+    max-width: 1380px;
     margin: 0 auto;
 }
 
 .btn-start a{
     text-decoration: none;
-    font-family: "Concert One", sans-serif;
-    color: white;
-    padding: 10px 40px;
-    margin-left: 800px;
-    margin-top: -100px;
+    font-family: var(--fonte-destaque);
     font-size: 35px;
     font-weight: 400;
-    background-color: #5CE1E6;
-    box-shadow: 0px 8px #51C2C6;
+    color: white;
+    background-color: var(--cor0);
+    box-shadow: 0px 8px var(--cor1);
+    padding: 10px 40px;
     border-radius: 25px;
     cursor: pointer;
     display: inline-block;
@@ -47,7 +55,7 @@ header{
     background-color: white;
     width: 100%;
     padding: 10px 4%;
-    box-shadow: 0px 3px 10px #cccccc79;
+    box-shadow: 0px 3px 10px #0000001c;
     position: fixed;
     z-index: 10;
 }
@@ -87,10 +95,22 @@ header nav ul li {
     align-items: center;
 }
 
+main{
+    min-width: 100px;
+    max-width: 1500px;
+    margin: auto;
+    padding: 20px;
+}
+
 /* ESTILO DO TOPO */
 
 section.topo{
     padding: 130px 170px 4%;
+}
+
+section.topo div a#startbutton{
+    margin-left: 800px;
+    margin-top: -100px;
 }
 
 /* ESTILO DO MEIO */
@@ -98,7 +118,7 @@ section.topo{
 section.middle{
     padding: 100px 170px 4%;
     margin-top: 80px;
-    background-color: #5CE1E6;
+    background-color: var(--cor0);
 }
 
 section.middle div.flex{
@@ -116,8 +136,12 @@ section.middle h2{
 }
 
 section.middle p{
-    color: #666666;
+    color: var(--cor4);
     padding-top: 40px;
+}
+
+section.middle p span{
+    font-weight: bold;
 }
 
 section img{
@@ -149,25 +173,29 @@ section.cards div.flex{
 
 section.cards h2{
     font-family: "Concert One";
-    color: #51C2C6;
+    color: var(--cor1);
     font-size: 50px;
     font-weight: 400;
     text-align: right;
 }
 
 section.cards p{
-    color: #666666;
+    color: var(--cor4);
     padding-top: 40px;
     padding-left: 90px;
     text-align: right;
 }
 
-section.cards span{
+section.cards span#purple{
     font-family: "Concert One";
-    color: #FDAFFF;
+    color: var(--cor3);
     font-size: 50px;
     font-weight: 400;
     text-align: right;
+}
+
+section.cards span#bold{
+    font-weight: bold;
 }
 
 section.cards div.cardstxt{
@@ -197,30 +225,35 @@ section.cards img.card{
 
 /* ESTILO MEET THE TEACHER */
 
-section.teacher div.waves{
+/* section.teacher div.waves{
     margin-top: -250px;
 
-}
+} */
 
 section.teacher{
-    padding: 10px 170px 4%;
-    padding-bottom: 150px;
-    margin-top: -60px;
-    background-color: #5CE1E6;
+    padding: 130px 170px 4%;
+    margin-top: -200px;
+    background-color: var(--cor0);
+    border-top: 20px solid var(--cor5);
 }
 
 section.teacher div.flex{
     display: flex;
-    gap: 70px;
+    gap: 90px;
     justify-content: center;
     align-items: center;
 }
 
 section.teacher p{
-    color: #666666;
+    color: #505050;
 }
 
-.banner .wavy{
+section.teacher h3{
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+}
+/* .banner .wavy{
     position: absolute;
     margin-top: -400px;
     width: 100%;
@@ -237,13 +270,16 @@ section.teacher p{
     transform: scaleX(-1);
     z-index: -10;
 }
+ */
 
 /* ESTILO FOOTER */
 
 footer{
-    width: 100%;
-    padding: 30px 30px 4%;
+    margin-top: -50;
+    margin-bottom: -20px;
+    padding: 20px 170px 4%;
     background-color: #FCFF7E;
+    border-top: 20px solid var(--cor5);
 }
 
 footer div.flex{
@@ -251,5 +287,10 @@ footer div.flex{
     padding-top: 40px;
     align-items: center;
     padding-left: 200px;
+}
+
+footer div a#startbutton{
+    margin-left: 600px;
+    margin-top: -100px;
 }
 
