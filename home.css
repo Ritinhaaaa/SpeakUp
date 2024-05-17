@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+
+
+:root {
+    --body-bg: #ffffff;
+    --nav-bg: #5CE1E6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-size: 1.25rem;
+    background: var(--body-bg);
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    gap: 2rem;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    max-height: 100svh;
+    background-color: var(--nav-bg);
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 1.5rem;
+    padding-block: 3rem;
+}
+
+.nav-list li {
+    background: var(--nav-bg);
+    padding: 0.5rem;
+    margin-left: 1.8rem;
+    border-radius: 100vw 0 0 100vw;
+}
+
+.nav-list li.active {
+    background-color: var(--body-bg);
+    view-transition-name: activeNavTab;
+    position: relative;
+}
+
+.nav-list li.active::before, .nav-list li.active::after {
+    --border-radius: 1.2rem;
+
+    content: '';
+    position: absolute;
+    width: var(--border-radius);
+    height: var(--border-radius);
+    right: 0;
+    background: var(--nav-bg);
+}
+
+.nav-list li.active::before {
+    top: calc(var(--border-radius) * -1);
+    border-radius: 0 0 100vw 0;
+    box-shadow: 4px 4px 0 4px var(--body-bg);
+}
+
+.nav-list li.active::after {
+    bottom: calc(var(--border-radius) * -1);
+    border-radius: 0 100vw 0 0;
+    box-shadow: 4px -4px 0 4px var(--body-bg);
+}
+
+.nav-list a.active {
+    color: #5CE1E6;
+}
+
+.nav-list a {
+    color: #ffffff;
+    text-decoration: none;
+}
